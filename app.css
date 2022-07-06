@@ -1,0 +1,69 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: #1a2130;
+  color: lightgrey;
+  font-size: 19px;
+}
+
+h1 {
+  background-color: #0b3944;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.Classical {
+  display: flex;
+  flex-direction: column;
+  width: 75rem;
+  margin-right: 15rem;
+  margin-left: 1rem;
+  justify-content: start;
+  text-align: left;
+  align-items: center;
+}
+
+#classical-ref {
+  text-align: left;
+  justify-content: start;
+}
+
+.classical-button {
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.Jazz {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-right: 1rem;
+  width: 105rem;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}
+
+.jazz-button {
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.player-box {
+  display: flex;
+  margin-top: 13rem;
+  margin-left: 40rem;
+  width: 35rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
