@@ -1,3 +1,4 @@
+// Determine if shift or ctrl has been pressed, object of objects to allow octave control for notes
 let shiftDown = false;
 let controlDown = false;
 let notes = {
@@ -43,9 +44,8 @@ $(document).keydown(function (e) {
     } else {
       input = notes[e.key].note + notes[e.key].octave;
     }
-    // if ($(`div[data-note="${input}"]`).hasClass("keyIsDown")) {
 
-    // }
+    // Change background of pressed key, toggle back to regular background after 1 second
     $(`div[data-note="${input}"]`).toggleClass("keyIsDown");
     setTimeout(() => {
       $(`div[data-note="${input}"]`).toggleClass("keyIsDown");

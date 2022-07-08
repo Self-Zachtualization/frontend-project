@@ -1,12 +1,14 @@
+// To-do:
 // Should ensure resizability to encourage side-by-side viewing of Songsterr page
-// Make sure entering text into input field does not fire keydown piano event
+// DONE Make sure entering text into input field does not fire keydown piano event
 // Dress up page with info on selected song
 // Make it possible to page through results instead of capping at 5
 // Ensure CSS is fairly interactive and responsive
-// Possibly implement a representation of current note being played
+// DONE Possibly implement a representation of current note being played
 // Audio visualizer?
 // Way to hold a modifier button to change length of note played
 
+// Create Classical music example and button for interaction
 const $classicalButton = $(".classical-button");
 
 $classicalButton.click(function () {
@@ -63,6 +65,7 @@ $classicalButton.click(function () {
   player.play();
 });
 
+// Create Jazz example and button for interaction
 const $jazzButton = $(".jazz-button");
 $jazzButton.click(function () {
   let conductor = new BandJS();
@@ -98,68 +101,7 @@ $jazzButton.click(function () {
   player.play();
 });
 
-// A3, B3, D3, F3, G3, B4, C4, D4, E4, F4
-// let shiftDown = false;
-// let controlDown = false;
-// let notes = {
-//   a: { note: "C", octave: "4" },
-//   w: { note: "C#", octave: "4" },
-//   s: { note: "D", octave: "4" },
-//   e: { note: "D#", octave: "4" },
-//   d: { note: "E", octave: "4" },
-//   f: { note: "F", octave: "4" },
-//   t: { note: "F#", octave: "4" },
-//   g: { note: "G", octave: "4" },
-//   y: { note: "G#", octave: "4" },
-//   h: { note: "A", octave: "4" },
-//   u: { note: "A#", octave: "4" },
-//   j: { note: "B", octave: "4" },
-// };
-
-// $("iframe").keydown(function (e) {
-//   console.log(e.key);
-//   let input = ""; //notes[e.key].note + notes[e.key].octave;
-
-//   if (e.key === "Shift") {
-//     if (!shiftDown) {
-//       shiftDown = true;
-//     } else {
-//       shiftDown = false;
-//     }
-//   }
-
-//   if (e.key === "Control") {
-//     if (!controlDown) {
-//       controlDown = true;
-//     } else {
-//       controlDown = false;
-//     }
-//   }
-
-//   if (e.key in notes) {
-//     if (shiftDown && !controlDown) {
-//       input = notes[e.key].note + "5";
-//     } else if (!shiftDown && controlDown) {
-//       input = notes[e.key].note + "3";
-//     } else {
-//       input = notes[e.key].note + notes[e.key].octave;
-//     }
-
-//     let conductor = new BandJS();
-//     let user = conductor.createInstrument("sine", "oscillators");
-//     user.setVolume(25);
-//     user.note("half", input);
-//     let player = conductor.finish();
-//     player.play();
-//   }
-// });
-
-// // Ghost mode -- DO NOT TURN THIS ON UNLESS YOU WANT ISSUES
-// // $("body").keyup(function (e) {
-// //   let player = conductor.finish();
-// //   player.stop();
-// // });
-
+// Create Submit event handler for $.get AJAX call, append results
 const $artistForm = $("#artist-form");
 const $artistInput = $('input[name="search-artist"]');
 
@@ -180,6 +122,7 @@ $artistForm.submit((event) => {
     $(`<select class="results"></select>`).appendTo($(".results-window"));
     $(`<option value="none" selected disabled hidden>Select an Option</option>`).appendTo(".results");
 
+    // Cap results to keep it concise and readable for user
     if (n > 0 && n < 5) {
       for (i = 0; i < n; i++) {
         $(`<option value="${data[i].id}">${data[i].title} by ${data[i].artist.name}</option>`).appendTo(
