@@ -29,24 +29,31 @@ p {
 
 .container {
   display: flex;
-  flex-direction: row;
-  column-count: 2;
+  /* flex-direction: column;
+  column-count: 2; */
   margin-inline: 1.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid black;
-  border-bottom-width: 2px;
+  /* border-bottom: 2px solid black;
+  border-bottom-width: 2px; */
   padding-bottom: 1rem;
+}
+
+.encyclopedia {
+  margin: 1rem;
+  border-bottom: 2px solid black;
 }
 
 .Classical {
   display: flex;
   flex-direction: column;
   width: 45%;
-  margin-right: 5%;
-  margin-left: 0.5rem;
-  justify-content: start;
+  /* margin-bottom: 1rem; */
+  /* margin-left: 0.5rem; */
+  justify-content: center;
   align-items: center;
   text-align: center;
+  /* border-bottom: 2px solid black;
+  padding-bottom: 1rem; */
 }
 
 a {
@@ -55,7 +62,7 @@ a {
 
 button {
   width: fit-content;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
   padding: 0.3rem;
   align-items: center;
   justify-content: center;
@@ -71,10 +78,10 @@ button:hover {
   display: flex;
   flex-direction: column;
   width: 45%;
-  margin-left: 15%;
+  /* margin-left: 15%; */
   /* margin-top: 16rem; */
   /* margin-right: 0.5rem; */
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }

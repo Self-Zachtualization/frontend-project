@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="index.css" />
 
     <title>Music Lesson</title>
@@ -18,8 +23,8 @@
   </head>
   <body>
     <h1>Music Lesson</h1>
-    <div class="container">
-      <div class="Classical">
+    <div class="container-fluid row encyclopedia">
+      <div class="container col-sm-3 Classical">
         <p>
           "Claude Debussy (1862-1918) composed Clair de Lune, the third movement from the Suite Bergamasque in
           1888 (first published in 1903). It is important to note that with the exception of the poetically
@@ -33,16 +38,11 @@
         <img
           src="https://www.udiscovermusic.com/wp-content/uploads/2019/06/Moonlight-Sontage-featured-image-1000.jpg"
           alt="Clair de Lunata"
-          style="width: 50rem; height: 30rem; margin: 1rem"
+          class="rounded img-fluid"
         />
       </div>
 
-      <div class="Jazz">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Louis_Armstrong_restored.jpg"
-          alt="The ol' king"
-          style="width: 37rem; height: 29rem; margin: 1rem"
-        />
+      <div class="container col-sm-3 Jazz">
         <p>
           "As jazz spread around the world, it drew on national, regional, and local musical cultures, which
           gave rise to different styles. New Orleans jazz began in the early 1910s, combining earlier
@@ -60,11 +60,18 @@
           Click the button below to hear an example of Louie Armstrong's cover of Edith Piaf's La Vie en Rose.
           <br />
         </p>
+
         <button class="jazz-button">Jazz Example</button>
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Louis_Armstrong_restored.jpg"
+          alt="The ol' king"
+          class="rounded img-fluid"
+        />
       </div>
     </div>
 
-    <div class="jazzhands">
+    <div class="container-fluid jazzhands">
       <iframe src="piano.html" title="Interactive Piano"></iframe>
     </div>
 
