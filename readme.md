@@ -21,6 +21,27 @@ I had to change my goals pretty quickly as I became familiar with the nature of 
 
 And while it is apparently impossible to get sheet music pulled in via API, I was able to make use of [The Songsterr API](https://www.songsterr.com/a/wa/api) to **call down a link to one of their tablature sheets**. They have a pretty good database of music, and while it's all guitar tabs and thus pretty useless to the user, at least it's something to play along with.
 
+### Does it meet the requirements of the assignment?
+
+**Event listeners assigned:**
+
+- `Click` events on the example music buttons
+- `Submit` event on the input field
+- `Change` event on the option field
+- `Keydown` event on the document for the piano (inside piano.js)
+
+**AJAX call to API**
+
+- Made use of Songsterr API to allow user to search for song or artist and receive a small list of options to choose from, in order to generate a link to Songsterr's tablature sheet
+
+**DOM manipulation based on user interaction**
+
+- On `submit` event, a results window div is "generated" to hold the `option`/`select` fields, as well as the result link. The results window is actually always present, but is `empty()`'d out on each submission. Each `change` event will `remove()` the result link (`<p id="workaround">`) so as to cleanly display the user's newly chosen link.
+
+**Decent, professional styling**
+
+- Made use of Colormind.io for styling guidelines, but failed to incorporate Bootstrap or any such library for styling assistance. Scaling the app down into a smaller window is currently _only responsive for the piano itself._
+
 ## How to Use / Deploy This App
 
 When the user loads the app, they will see two music history paragraphs, a couple pictures, and a couple buttons they can press to hear some hand-coded tunes exemplifying the music.

@@ -62,7 +62,7 @@ $(document).keydown(function (e) {
   }
 });
 
-// Ghost mode
+// Ghost mode // DO NOT TURN THIS ON UNLESS YOU WANT ISSUES
 // $("body").keyup(function (e) {
 //   let player = conductor.finish();
 //   player.stop();
