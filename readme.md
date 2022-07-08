@@ -40,7 +40,7 @@ And while it is apparently impossible to get sheet music pulled in via API, I wa
 
 **Decent, professional styling**
 
-- Made use of Colormind.io for styling guidelines, but failed to incorporate Bootstrap or any such library for styling assistance. Scaling the app down into a smaller window is currently _only responsive for the piano itself._
+- Made use of Colormind.io for styling guidelines, but failed to incorporate Bootstrap or any such library for styling assistance. Scaling the app down into a smaller window is currently _only responsive for the piano itself._ Other than the piano, pretty much everything will break down even if you're just viewing on a smaller screen. My issues stem mainly from trying to juggle all of those element styles myself and not knowing enough about how to do that properly. I'm going to work with a CSS library to help out with that before I tackle any future web project.
 
 ## How to Use / Deploy This App
 
