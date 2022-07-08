@@ -1,0 +1,65 @@
+:root {
+  --keyboard_Width: 80vw;
+  --keyboard_Height: calc(var(--keyboard_Width) * 0.18);
+  --border_Width: calc(var(--keyboard_Width) * 0.0015);
+  --whiteKey_Count: 21;
+  --whiteKey_Height: var(--keyboard_Height);
+  --whiteKey_Width: calc((var(--keyboard_Width) / var(--whiteKey_Count)));
+  --blackKey_Height: calc((var(--whiteKey_Height) * 0.55));
+  --blackKey_Width: calc((var(--whiteKey_Width) * 0.55));
+  --blackKey_Offset: calc((calc(var(--blackKey_Width) / -2)) - var(--border_Width));
+
+  --whiteKey_Color: #cbcbcb;
+  --blackKey_Color: #222222;
+  --blackKey_BorderColor: #000000;
+  --whiteKey_BorderColor: #aaaaaa;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+
+.key {
+  float: left;
+  position: relative;
+}
+
+.white {
+  height: var(--whiteKey_Height);
+  width: var(--whiteKey_Width);
+  z-index: 1;
+  border-top: var(--border_Width) solid var(--whiteKey_BorderColor);
+  border-bottom: var(--border_Width) solid var(--whiteKey_BorderColor);
+  border-left: var(--border_Width) solid var(--whiteKey_BorderColor);
+  background-color: var(--whiteKey_Color);
+}
+
+.black {
+  height: var(--blackKey_Height);
+  width: var(--blackKey_Width);
+  z-index: 2;
+  border: var(--border_Width) solid var(--blackKey_BorderColor);
+  background-color: var(--blackKey_Color);
+}
+
+.a,
+.b,
+.d,
+.e,
+.g,
+.black {
+  margin: 0 0 0 var(--blackKey_Offset);
+}
+
+#keyboard > .note:last-child {
+  border-right: var(--border_Width) solid var(--whiteKey_BorderColor);
+}

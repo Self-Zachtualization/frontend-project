@@ -1,0 +1,175 @@
+:root {
+  --textLight: #f3f2ee;
+  --accentLight: #98cada;
+  --mainColor: #5e84a2;
+  --accentDark: #6990be;
+  --textDark: #143568;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: var(--textDark);
+  color: var(--textLight);
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainColor);
+  color: var(--textLight);
+  padding: 30px;
+  font-size: 35px;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid black;
+  border-bottom-width: 2px;
+  padding-bottom: 1rem;
+}
+
+.Classical {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-right: 5%;
+  margin-left: 0.5rem;
+  justify-content: start;
+}
+
+a {
+  color: var(--accentLight);
+}
+
+button {
+  width: fit-content;
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  border: var(--textDark);
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: var(--accentLight);
+}
+
+.Jazz {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-left: 5%;
+  margin-top: 16rem;
+  margin-right: 0.5rem;
+  justify-content: end;
+  align-items: end;
+  text-align: right;
+}
+
+.jazzhands {
+  display: flex;
+  width: 100%;
+  height: 30rem;
+  justify-content: center;
+}
+
+iframe {
+  display: flex;
+  height: auto;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px #0a1c36;
+}
+
+.play-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10rem;
+  margin-top: 1rem;
+  border-top: 2px solid black;
+  border-top-width: 2px;
+  padding-top: 1rem;
+}
+
+.player-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 25%;
+  margin-right: 1rem;
+  margin-inline: 0.5rem;
+}
+
+.box-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 75%;
+  margin-left: 1rem;
+  margin-inline: 0.5rem;
+}
+
+.box-holder > p {
+  width: 25%;
+  justify-content: center;
+}
+
+#artist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+#artist-form > input {
+  justify-content: center;
+  width: 75%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#artist-form > button {
+  width: fit-content;
+  padding: 0.3rem;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  border: var(--textDark);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.results-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  width: 25%;
+  font-size: 18px;
+  margin-inline: 0.5rem;
+}
+
+.results-window > select {
+  font-size: 18px;
+}
