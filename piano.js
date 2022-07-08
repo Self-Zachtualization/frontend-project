@@ -17,9 +17,10 @@ let notes = {
 };
 
 $(document).keydown(function (e) {
-  let input = ""; //notes[e.key].note + notes[e.key].octave;
+  let rawInput = e.key;
+  let input = rawInput.toLowerCase(); //notes[e.key].note + notes[e.key].octave;
 
-  if (e.key === "Shift") {
+  if (input === "shift") {
     if (!shiftDown) {
       shiftDown = true;
     } else {
@@ -27,7 +28,7 @@ $(document).keydown(function (e) {
     }
   }
 
-  if (e.key === "Control") {
+  if (input === "control") {
     if (!controlDown) {
       controlDown = true;
     } else {
@@ -35,13 +36,13 @@ $(document).keydown(function (e) {
     }
   }
 
-  if (e.key in notes) {
+  if (input in notes) {
     if (shiftDown && !controlDown) {
-      input = notes[e.key].note + "5";
+      input = notes[input].note + "5";
     } else if (!shiftDown && controlDown) {
-      input = notes[e.key].note + "3";
+      input = notes[input].note + "3";
     } else {
-      input = notes[e.key].note + notes[e.key].octave;
+      input = notes[input].note + notes[input].octave;
     }
 
     // Change background of pressed key, toggle back to regular background after 1 second
