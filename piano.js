@@ -17,7 +17,6 @@ let notes = {
 };
 
 $(document).keydown(function (e) {
-  console.log(e.key);
   let input = ""; //notes[e.key].note + notes[e.key].octave;
 
   if (e.key === "Shift") {
@@ -50,8 +49,6 @@ $(document).keydown(function (e) {
     setTimeout(() => {
       $(`div[data-note="${input}"]`).toggleClass("keyIsDown");
     }, 1000);
-
-    console.log("Trying to match input to piano key visual", $(`div[data-note="${input}"]`));
 
     let conductor = new BandJS();
     let user = conductor.createInstrument("sine", "oscillators");
