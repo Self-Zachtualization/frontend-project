@@ -63,3 +63,7 @@ body {
 #keyboard > .note:last-child {
   border-right: var(--border_Width) solid var(--whiteKey_BorderColor);
 }
+
+.keyIsDown {
+  background-color: #98cada;
+}
