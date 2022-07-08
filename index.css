@@ -121,7 +121,7 @@ iframe {
   display: flex;
   flex-direction: column;
   column-count: 1;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   text-align: center;
   width: 25%;
