@@ -112,7 +112,7 @@ $artistForm.submit((event) => {
   if (userInput === "") {
     return;
   }
-  const URL = `http://www.songsterr.com/a/ra/songs.json?pattern=${userInput}`;
+  const URL = `https://www.songsterr.com/a/ra/songs.json?pattern=${userInput}`;
 
   $.get(URL, (data) => {
     console.log(data, "This is the data");
@@ -147,7 +147,7 @@ $artistForm.submit((event) => {
       let $selected = $(".results").val();
       $(`<p id='workaround'></p>`)
         .html(
-          `<a href="http://www.songsterr.com/a/wa/song?id=${$selected}" target="_blank">Open this in a new tab or window, then click back over here to try and play along!</a>`
+          `<a href="https://www.songsterr.com/a/wa/song?id=${$selected}" target="_blank">Open this in a new tab or window, then click back over here to try and play along!</a>`
         )
         .appendTo(".results-window");
     });
